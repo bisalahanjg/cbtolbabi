@@ -4,7 +4,7 @@ define('API_KEY', '1847280168:AAGR9JY20lXvo44Xph9BrgAsYgwYnoJCy_E');
 $config['title'] = 'Robinhood X SPM55';
 $config['url'] = 'https://roblnh0od.com';
 $config['parameter'] = 'spm55';
-$config['chat_id'] = '-649296951';
+$config['chat_id'] = '-771260425';
 $config['alex'] = 'on';
 $config['email_cs'] = 'report.us.robinhood@gmail.com';
 
